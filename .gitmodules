@@ -1,0 +1,3 @@
+[submodule "parcem"]
+	path = parcem
+	url = https://github.com/N1Chaos/parcem
