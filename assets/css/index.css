@@ -1,75 +1,67 @@
-/* index.css */
+/* Couleur officielle proche Éducation nationale */
+.bg-academie {
+  background-color: #003366;
+}
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f6f7;
+/* Titres */
+h1, h2 {
+  color: #003366;
+}
+
+/* Cartes disciplines */
+.discipline-card {
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   color: #222;
 }
 
-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-  padding: 20px;
-  text-align: center;
+.discipline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  color: #003366;
 }
 
-header img {
-  height: 80px;
+/* Icônes dans les cartes */
+.discipline-card .icon {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-h1 {
-  margin: 10px 0 5px 0;
-  font-size: 2rem;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 5px;
-}
-
-.academy {
-  font-size: 0.95rem;
-  color: #777;
-}
-
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.btn {
-  display: block;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #222;
-  font-size: 1.1rem;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover {
-  background-color: #eef2f6;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
+/* Pied de page */
 footer {
-  margin-top: 60px;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
+  background-color: #f5f6f7;
+}
+
+/* Icônes dans les cartes */
+.discipline-card .icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  background-color: #e6eef5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: #003366;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animation au survol */
+.discipline-card:hover .icon {
+  background-color: #003366;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Bandeau ministériel */
+.bandeau-ministere {
+  background-color: #f1f3f5;
+  border-bottom: 1px solid #ddd;
+  padding: 6px 0;
+  font-size: 0.85rem;
+  color: #444;
 }

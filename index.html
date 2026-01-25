@@ -4,33 +4,150 @@
   <meta charset="UTF-8" />
   <title>Maîtrise de la langue</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <!-- Ton CSS -->
   <link rel="stylesheet" href="assets/css/index.css">
 </head>
-<body>
 
-  <header>
-    <img src="assets/images/logo-academie-paris.png" alt="Académie de Paris" />
-    <h1>Maîtrise de la langue</h1>
-    <div class="subtitle">Portail pédagogique pour le commentaire de documents</div>
-    <div class="subtitle">dans les disciplines artistiques, littéraires et scientifiques</div>
-    <div class="academy">Académie de Paris</div>
+<body>
+  <!-- BANDEAU INSTITUTIONNEL -->
+<div class="bandeau-ministere">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="small">
+      Ministère de l’Éducation nationale – Académie de Paris
+    </div>
+    <div class="small">
+      Portail pédagogique académique
+    </div>
+  </div>
+</div>
+
+
+  <!-- BARRE DE NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-academie">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Maîtrise de la langue</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="presentation.html">Présentation</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- EN-TÊTE -->
+  <header class="bg-white border-bottom py-4">
+    <div class="container d-flex align-items-center">
+
+      <img src="assets/images/logo-academie-paris.png" alt="Académie de Paris" height="70" class="me-4">
+
+      <div>
+        <h1 class="h3 mb-1">Maîtrise de la langue</h1>
+        <div class="text-muted">
+          Portail pédagogique pour le commentaire de documents<br>
+          dans les disciplines artistiques, littéraires et scientifiques
+        </div>
+        <div class="text-muted small mt-1">Académie de Paris</div>
+      </div>
+
+    </div>
   </header>
 
-  <main>
-    <div class="buttons">
-      <a class="btn" href="parcem/index.html">🎵 Éducation musicale</a>
-      <a class="btn" href="#">🎨 Histoire des arts</a>
-      <a class="btn" href="#">📜 Histoire-Géographie</a>
-      <a class="btn" href="#">📖 Lettres</a>
-      <a class="btn" href="#">🛠️ Technologie</a>
-      <a class="btn" href="#">⚛️ Physique-chimie</a>
+  <!-- CONTENU PRINCIPAL -->
+  <main class="container my-5">
+
+    <h2 class="text-center mb-5">
+      Choisissez une discipline
+    </h2>
+
+    <!-- GRILLE DES DISCIPLINES -->
+    <div class="row g-4">
+
+      <!-- Carte discipline -->
+      <div class="col-md-4">
+        <a href="parcem/index.html" class="card discipline-card text-center h-100">
+          <div class="card-body">
+            <div class="icon"><i class="bi bi-music-note-beamed"></i></div>
+            <h5 class="card-title">Éducation musicale</h5>
+            <p class="card-text">Analyse de documents sonores et iconographiques</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="#" class="card discipline-card text-center h-100">
+          <div class="card-body">
+            <div class="icon"><i class="bi bi-palette-fill"></i></div>
+            <h5 class="card-title">Histoire des arts</h5>
+            <p class="card-text">Étude et commentaire d’œuvres visuelles</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="#" class="card discipline-card text-center h-100">
+          <div class="card-body">
+            <div class="icon"><i class="bi bi-journal-text"></i></div>
+            <h5 class="card-title">Histoire-Géographie</h5>
+            <p class="card-text">Analyse de documents historiques et cartographiques</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="#" class="card discipline-card text-center h-100">
+          <div class="card-body">
+            <div class="icon"><i class="bi bi-book-fill"></i></div>
+            <p class="card-text">Commentaire de textes littéraires</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="#" class="card discipline-card text-center h-100">
+          <div class="card-body">
+            <div class="icon"><i class="bi bi-gear-fill"></i></div>
+            <p class="card-text">Analyse de documents techniques</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="#" class="card discipline-card text-center h-100">
+          <div class="card-body">
+            <div class="icon"><i class="bi bi-hexagon-fill"></i></div>
+            <p class="card-text">Étude de documents scientifiques</p>
+          </div>
+        </a>
+      </div>
+
     </div>
+
   </main>
 
-  <footer>
+  <!-- PIED DE PAGE -->
+  <footer class="text-center text-muted py-4 border-top">
     Projet pédagogique — Académie de Paris
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Ton JS -->
   <script src="assets/js/script.js"></script>
+
 </body>
 </html>
