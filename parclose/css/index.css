@@ -1,0 +1,188 @@
+/* ======================================
+   PARCLOSE CSS – Inspiré de Parcem
+   ====================================== */
+
+/* ----------------------
+   Base & typographie
+---------------------- */
+body {
+    font-family: 'Poppins', 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+/* Titres */
+h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 2.2rem; font-weight: 700; }
+h3 { font-size: 1.4rem; font-weight: 600; }
+h4 { font-size: 1.2rem; font-weight: 500; }
+
+/* ----------------------
+   Mini-header
+---------------------- */
+.d-flex.align-items-center.justify-content-between.mb-3.mt-2.p-2.border.rounded.bg-light {
+    background-color: #f1f3f5 !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* ----------------------
+   Cartes (cards)
+---------------------- */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+}
+
+.card-body h3.card-title {
+    margin-bottom: 1rem;
+}
+
+/* ----------------------
+   Boutons cliquables (vocabulaire et catégories)
+---------------------- */
+.btn-outline-primary, 
+.btn-outline-secondary, 
+.btn-outline-success, 
+.btn-outline-danger {
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover,
+.btn-outline-success:hover,
+.btn-outline-danger:hover {
+    transform: translateY(-2px);
+}
+
+/* Conteneur des mots sélectionnés */
+.selected-words-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.selected-words-container span {
+    background-color: #e3f2fd;
+    border-radius: 12px;
+    padding: 4px 8px;
+    font-size: 0.9rem;
+}
+
+/* ----------------------
+   Aperçu image œuvre
+---------------------- */
+.artwork-preview, #artworkPreview {
+    max-width: 100%;
+    max-height: 350px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* ----------------------
+   Commentaire écrit
+---------------------- */
+#commentEditor {
+    background-color: #ffffff;
+    border-radius: 8px;
+    min-height: 200px;
+    padding: 15px;
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    overflow-y: auto;
+    border: 1px solid #ced4da;
+}
+
+#globalSelectedWords {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 60px;
+    max-height: 120px;
+    overflow-y: auto;
+    display: none;
+    font-size: 1.1rem;
+}
+
+/* ----------------------
+   Commentaire audio simplifié
+---------------------- */
+.audio-card .btn {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.audio-card audio {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+/* ----------------------
+   Modales Carte & Frise
+---------------------- */
+.modal-content {
+    border-radius: 12px;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 8px;
+}
+
+#friseChronoModal img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* ----------------------
+   Layout & utilitaires
+---------------------- */
+.container, .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.mb-4 { margin-bottom: 1.5rem !important; }
+.mt-2 { margin-top: 0.5rem !important; }
+
+.text-center { text-align: center !important; }
+
+.d-flex { display: flex !important; }
+.justify-content-between { justify-content: space-between !important; }
+.justify-content-center { justify-content: center !important; }
+
+.gap-2 { gap: 0.5rem !important; }
+.gap-3 { gap: 0.75rem !important; }
+
+.border { border: 1px solid #dee2e6 !important; }
+
+/* ----------------------
+   Responsive
+---------------------- */
+@media (max-width: 768px) {
+    #commentEditor, #globalSelectedWords {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.45rem 0.65rem;
+    }
+    .artwork-preview, #artworkPreview {
+        max-height: 250px;
+    }
+}

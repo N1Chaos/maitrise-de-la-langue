@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parclose – Analyse d’œuvre | Histoire des arts</title>
+
+  <!-- Bootstrap CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!-- Custom CSS Parcem -->
+  <link rel="stylesheet" href="css/index.css"/>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body class="container-fluid">
+
+  <!-- Mini-header Parclose -->
+  <div class="d-flex align-items-center justify-content-between mb-3 mt-2 p-2 border rounded bg-light">
+    <div class="d-flex align-items-center">
+      <img src="../assets/images/logo-academie-paris.png" alt="Académie de Paris" height="50" class="me-2">
+      <div>
+        <strong>Parclose</strong><br>
+        <small>Projet pédagogique — Académie de Paris</small>
+      </div>
+    </div>
+    <div>
+      <a href="../index.html" class="btn btn-outline-primary">
+        <i class="bi bi-arrow-left-circle"></i> Retour au portail
+      </a>
+    </div>
+  </div>
+
+  <!-- Présentation Parclose -->
+  <header class="text-center mb-4">
+    <h1>Parclose</h1>
+    <h5 class="text-muted">Analyse d’œuvre – Histoire des arts (cycle 4)</h5>
+    <p>
+      Le nom <strong>Parclose</strong> évoque la menuiserie et l’architecture : un panneau ou une baguette qui encadre et protège. Ici, il symbolise l’observation minutieuse et l’analyse structurée d’une œuvre artistique.
+    </p>
+  </header>
+
+  <!-- Section : Œuvre étudiée -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3>1. Identifier l’œuvre</h3>
+      <div class="mb-3">
+        <label class="form-label">Importer une image de l’œuvre</label>
+        <input type="file" id="imageFile" class="form-control" accept="image/*">
+      </div>
+      <div class="text-center mb-3">
+        <img id="artworkPreview" class="img-fluid rounded border" style="display:none; max-height:350px;">
+      </div>
+      <div class="row g-2 mb-2">
+        <div class="col-md-4"><input class="form-control" placeholder="Titre de l’œuvre"></div>
+        <div class="col-md-4"><input class="form-control" placeholder="Artiste / auteur"></div>
+        <div class="col-md-4"><input class="form-control" placeholder="Date / période"></div>
+      </div>
+      <div class="row g-2">
+        <div class="col-md-4"><input class="form-control" placeholder="Domaine artistique (peinture, musique…)"></div>
+        <div class="col-md-4"><input class="form-control" placeholder="Aire culturelle / pays"></div>
+        <div class="col-md-4"><input class="form-control" placeholder="Lieu de conservation / diffusion"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section : Description formelle -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3>2. Observer et décrire</h3>
+      <div class="row g-2">
+        <div class="col"><a href="#" class="btn btn-outline-primary w-100">Couleurs</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-primary w-100">Formes et lignes</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-primary w-100">Composition</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-primary w-100">Lumière</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-primary w-100">Matière / texture</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section : Sujet et fonction -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3>3. Sujet, sens et fonction</h3>
+      <div class="row g-2">
+        <div class="col"><a href="#" class="btn btn-outline-secondary w-100">Sujet / thème</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-secondary w-100">Personnages</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-secondary w-100">Symboles</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-secondary w-100">Fonction de l’œuvre</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section : Contexte historique et culturel -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3>4. Contexte historique et culturel</h3>
+      <div class="row g-2">
+        <div class="col"><a href="#" class="btn btn-outline-success w-100">Époque</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-success w-100">Courant artistique</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-success w-100">Contexte historique</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-success w-100">Commanditaire / public</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section : Interprétation -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3>5. Interprétation et réception</h3>
+      <div class="row g-2">
+        <div class="col"><a href="#" class="btn btn-outline-danger w-100">Émotions</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-danger w-100">Message / idée</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-danger w-100">Intention de l’artiste</a></div>
+        <div class="col"><a href="#" class="btn btn-outline-danger w-100">Réception</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carte cliquable + Frise chronologique -->
+  <div class="row mb-4">
+    <div class="col-12 text-center p-2 d-flex justify-content-center gap-3">
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#carteMondeModal">
+        <i class="bi bi-globe"></i> Carte du monde
+      </button>
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#friseChronoModal">
+        <i class="bi bi-calendar-range"></i> Frise chronologique
+      </button>
+    </div>
+  </div>
+
+  <!-- Modales Carte et Frise -->
+  <div class="modal fade" id="carteMondeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Carte du monde interactive</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body"><div id="map" style="height: 500px;"></div></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="friseChronoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Frise chronologique</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/frise.jpg" class="img-fluid" alt="Frise chronologique">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Commentaire écrit -->
+  <div class="col-md-8 mb-4 w-100">
+    <div id="commentCard" class="card bg-primary bg-opacity-10 h-100">
+      <div class="card-body">
+        <h3 class="card-title">Commentaire écrit</h3>
+        <div id="globalSelectedWords" class="mt-3 p-3 border rounded" style="background-color: #f8f9fa; display:none;">
+          <strong>Vocabulaire sélectionné :</strong>
+          <div id="globalWordsList" class="d-flex flex-wrap gap-2 mt-2"></div>
+        </div>
+        <div id="commentEditor" contenteditable="true" class="form-control" 
+             style="min-height:200px; padding:15px; font-family:'Georgia', serif; font-size:1.1rem; line-height:1.6; overflow-y:auto; border-radius:8px;"
+             placeholder="Écrivez votre commentaire (gras = Ctrl+B, italique = Ctrl+I)"></div>
+        <button class="btn btn-primary mt-3 me-2" id="generateTextButton">Générer un fichier texte</button>
+        <button id="exportWordButton" class="btn btn-primary mt-3">Exporter en Word</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Commentaire audio -->
+  <div class="col-md-8 mb-4 w-100">
+    <div class="card audio-card h-100">
+      <div class="card-body">
+        <h3 class="card-title">Commentaire audio</h3>
+        <div class="d-flex flex-column gap-3">
+          <button id="recordButton" class="btn btn-danger">Enregistrer votre commentaire</button>
+          <span id="recordingIndicator" style="display:none;">Enregistrement en cours...</span>
+          <span id="recordingConfirmation" style="display:none;">Commentaire enregistré ! Écoutez-le ci-dessous.</span>
+          <audio id="audioPlayback" class="w-100" controls></audio>
+          <input type="text" id="fileName" class="form-control" placeholder="Nommer le fichier audio" />
+          <button id="downloadButton" class="btn btn-success">Télécharger votre commentaire</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/definitions.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
